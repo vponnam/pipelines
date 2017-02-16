@@ -6,7 +6,13 @@ image_resource:
   source: {repository: busybox}
   
 inputs:
-- name: src
+- name: src-configs
 
 run:
-  path: src/workout/smoke-tests/redis-monitoring.sh
+  path: src-configs/redis-monitoring.sh
+  params: 
+    a: {{cf-api}}
+    u: {{cf-username:}}
+    p: {{cf-password}}
+    onm: {{cf-organization}}
+    snm: {{cf-space}}

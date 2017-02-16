@@ -5,6 +5,7 @@ curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github"
 mv cf /usr/local/bin
 cf --version
 
+cf login -a $a -u $u -p $p -o $onm -s $snm
 
 #Shared_VM plan 
 echo `cf curl /v2/service_plans/50d2b223-1d7b-4ad1-9cb5-98b54b7c70b4 | awk -v i=3 -v j=2 'FNR == i {print $j}'` |tr -d '",'  #guid from /v2/service_plans
