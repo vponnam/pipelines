@@ -12,7 +12,7 @@ run:
   path: src-configs/redis-monitoring.sh
   params: 
     a: {{cf-api}}
-    u: {{cf-username:}}
+    u: {{cf-username}}
     p: {{cf-password}}
     onm: {{cf-organization}}
     snm: {{cf-space}}
